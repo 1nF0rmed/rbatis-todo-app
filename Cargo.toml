@@ -1,0 +1,25 @@
+[package]
+name = "rbatis-todo-app"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rbatis = "3"
+rbson = "2.0"
+dotenv = "0.15.0"
+failure = "0.1.5"
+lazy_static = "1.4.0"
+actix-rt = "2.5.1"
+actix-web = "4.0.0-beta.11"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0.74", features = ["raw_value"] }
+
+[dependencies.uuid]
+version = "1.0.0-alpha.1"
+features = [
+    "v4",                # Lets you generate random UUIDs
+    "fast-rng",          # Use a faster (but still sufficiently random) RNG
+    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+]
